@@ -1,0 +1,26 @@
+#main.py
+#main function
+#To get user instructions and follow it
+#Finaly prints Data Store
+
+import globals
+import code
+
+globals.initialize()
+
+c=input("Do you want to continue? ")
+while(c=='y' or c=='Y'):
+    o=input("Create or Read or Delete :")
+    if(o=='c' or o=='C'):
+        k=input("Enter Key")
+        v=input("Enter Value")
+        code.create(k,v)          
+    elif(o=='r' or o=='R'):
+        k=input("Enter Key")
+        code.read(k)
+    elif(o=='d' or o=='D'):
+        k=input("Enter Key")
+        code.delete(k)
+    c=input("Do you want to continue? ")
+print(globals.dataStore)
+
